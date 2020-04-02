@@ -21,8 +21,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ajoy39\\LaravelAzureStorage\\Providers\\AzureBlobStorageProvider"
+                "LaravelAzureStorage\\AzureBlobStorageProvider"
             ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelAzureStorage\\": "src/"
         }
     },
     "autoload-dev": {
