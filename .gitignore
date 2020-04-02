@@ -1,0 +1,4 @@
+vendor/
+.devcontainer/
+.phpunit.result.cache
+./tests/coverage/
