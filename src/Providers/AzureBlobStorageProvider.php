@@ -17,9 +17,7 @@ class AzureBlobStorageProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->publishes([
-            __DIR__.'/src/config.php' => config_path('azure_blob_storage.php'),
-        ]);
+
     }
 
     /**
