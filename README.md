@@ -3,6 +3,11 @@
 
 This package provides an easy, out of the box, service provider for using Azure Blob Storage to back Laravel's Storage service. 
 
+### Installation
+
+```
+composer require ajoy39/laravel-storage-azure
+```
 
 ### Configuration
 
