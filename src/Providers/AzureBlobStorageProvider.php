@@ -17,7 +17,6 @@ class AzureBlobStorageProvider extends ServiceProvider
      */
     public function register()
     {
-
     }
 
     /**
@@ -28,7 +27,14 @@ class AzureBlobStorageProvider extends ServiceProvider
     public function boot()
     {
         Storage::extend('azure-blob-storage', function ($app, $config) {
-            $client = BlobRestProxy::createBlobService("DefaultEndpointsProtocol=https;AccountName={$config['account_name']};AccountKey={$config['account_key']};");
+            if (isset($config['connection_string'])) {
+                $client = BlobRestProxy::createBlobService($config['connection_string']);
+            } elseif (isset($config['endpoint_suffix'])) {
+                $client = BlobRestProxy::createBlobService("DefaultEndpointsProtocol=https;AccountName={$config['account_name']};AccountKey={$config['account_key']};EndpointSuffix={$config['endpoint_suffix']}");
+            } else {
+                $client = BlobRestProxy::createBlobService("DefaultEndpointsProtocol=https;AccountName={$config['account_name']};AccountKey={$config['account_key']};");
+
+            }
             return new Filesystem(new AzureBlobStorageAdapter($client, $config['container']));
         });
     }

@@ -25,7 +25,9 @@ class TestCase extends \Orchestra\Testbench\TestCase
             'driver' => 'azure-blob-storage',
             'account_name' => env('AZURE_BLOB_STTORAGE_ACCOUNT_NAME'),
             'account_key' => env('AZURE_BLOB_STORAGE_ACCOUNT_KEY'),
-            'container' => env('AZURE_BLOB_STORAGE_CONTAINER')
+            'container' => env('AZURE_BLOB_STORAGE_CONTAINER'),
+            'endpoint_suffix' => env('AZURE_BLOB_STORAGE_ENDPOINT_SUFFIX'),
+            'connection_string' => env('AZURE_STORAGE_CONNECTION_STRING')
         ]);
         
         parent::getEnvironmentSetUp($app);
