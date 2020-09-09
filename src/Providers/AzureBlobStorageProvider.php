@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelAzureStorage;
+namespace LaravelAzureStorage\Providers;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;

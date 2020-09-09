@@ -8,7 +8,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
 {
     protected function getPackageProviders($app)
     {
-        return ['LaravelAzureStorage\AzureBlobStorageProvider'];
+        return ['LaravelAzureStorage\Providers\AzureBlobStorageProvider'];
     }
 
     /**
@@ -23,7 +23,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
         $app->bootstrapWith([LoadEnvironmentVariables::class]);
         $app['config']->set('filesystems.disks.azure', [
             'driver' => 'azure-blob-storage',
-            'account_name' => env('AZURE_BLOB_STTORAGE_ACCOUNT_NAME'),
+            'account_name' => env('AZURE_BLOB_STORAGE_ACCOUNT_NAME'),
             'account_key' => env('AZURE_BLOB_STORAGE_ACCOUNT_KEY'),
             'container' => env('AZURE_BLOB_STORAGE_CONTAINER'),
             'endpoint_suffix' => env('AZURE_BLOB_STORAGE_ENDPOINT_SUFFIX'),

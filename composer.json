@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelAzureStorage\\AzureBlobStorageProvider"
+                "LaravelAzureStorage\\Providers\\AzureBlobStorageProvider"
             ]
         }
     },
