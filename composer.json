@@ -7,7 +7,7 @@
         "league/flysystem-cached-adapter": "^1.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^5.1",
+        "orchestra/testbench": "^5.1 || ^6.0",
         "phpunit/phpunit": "^9.0"
     },
     "license": "MIT",
