@@ -3,7 +3,7 @@
     "description": "An Azure Blob Storage driver for Laravel Storage",
     "type": "library",
     "require": {
-        "league/flysystem-azure-blob-storage": "^0.1.6",
+        "league/flysystem-azure-blob-storage": "^0.1.6 || ^1.0.0",
         "league/flysystem-cached-adapter": "^1.0"
     },
     "require-dev": {
